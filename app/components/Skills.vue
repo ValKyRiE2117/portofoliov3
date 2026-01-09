@@ -8,9 +8,9 @@
         <UPageCard
           v-for="skill in skills"
           :key="skill.name"
+          class="text-center bg-white/5 backdrop-blur-lg" 
           spotlight
           spotlight-color="primary"
-          class="text-center glass-card-spotlight bg-" 
         >
           <i
             v-if="skill.icon"

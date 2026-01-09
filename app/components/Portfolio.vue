@@ -11,7 +11,7 @@
           v-for="category in categories"
           :key="category"
           @click="selectedCategory = category"
-          class="px-4 py-2 md:px-6 md:py-2 rounded-full text-sm font-semibold transition-all duration-300"
+          class="px-4 py-2 md:px-6 md:py-2 rounded-lg text-sm font-semibold transition-all duration-300"
           :class="
             selectedCategory === category
               ? 'bg-primary text-white'
@@ -37,7 +37,7 @@
         <div
           v-for="project in paginatedProjects"
           :key="project.id"
-          class="glass-card rounded-xl overflow-hidden hover:scale-105 transition-transform"
+          class="bg-white/5 backdrop-blur-lg rounded-xl overflow-hidden"
         >
           <NuxtImg
             :src="project.image"
@@ -45,29 +45,13 @@
             class="w-full object-cover aspect-video"
           />
           <div class="p-4 md:p-6">
-            <span
-              class="text-primary text-xs font-semibold bg-primary/10 px-2 py-1 rounded-full"
-            >
-              {{ project.category }}
-            </span>
+            <UBadge :label="project.category" variant="subtle" />
             <h3 class="text-xl font-bold mt-2 mb-3">{{ project.title }}</h3>
-            <p class="text-gray-400 text-sm mb-4">{{ project.description }}</p>
+            <p class="text-gray-400 text-sm mb-4 line-clamp-2">{{ project.description }}</p>
             <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
-              <span
-                v-for="tech in project.technologies"
-                :key="tech"
-                class="px-2 sm:px-3 py-1 bg-gray-800 rounded-full text-xs whitespace-nowrap hover:bg-gray-700 transition-colors"
-              >
-                {{ tech }}
-              </span>
+              <UBadge v-for="tech in project.technologies" :key="tech" :label="tech" variant="subtle"/>
             </div>
-            <a
-              :href="project.link"
-              target="_blank"
-              class="text-primary text-sm hover:underline"
-            >
-              <i class="fas fa-arrow-right mr-2"></i>View Project
-            </a>
+            <UButton :to="project.link" target="_blank" class="w-full" variant="solid" size="lg">View Project &raquo;</UButton>
           </div>
         </div>
       </div>
