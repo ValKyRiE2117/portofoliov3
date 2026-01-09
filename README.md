@@ -1,75 +1,39 @@
-# Nuxt Minimal Starter
+# 🚀 Aritza Ganendra Kusuma - Professional Portfolio
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Modern, responsive, and dynamic portfolio built with **Nuxt 3**, **Tailwind CSS**, and **Supabase**.
 
-## Setup
+🔗 **Live Demo:** [https://aritzagk.vercel.app/](https://aritzagk.vercel.app/)
 
-Make sure to install dependencies:
+---
 
-```bash
-# npm
-npm install
+## ✨ Features
 
-# pnpm
-pnpm install
+- **Dynamic Projects**: Fetched in real-time from Supabase database.
+- **Glassmorphism Design**: Modern UI with sleek glass-card effects and smooth animations.
+- **Responsive Layout**: Optimized for Mobile, Tablet, and Desktop.
+- **Project Filtering**: Filter projects by categories (Website, Mobile, UI/UX).
+- **Skill Showcase**: Dynamic skills grid with modern SVG icons.
+- **Vercel Analytics**: Built-in monitoring for visitor insights.
+- **Dark Mode Optimized**: Deep gray and primary color palette for a premium feel.
 
-# yarn
-yarn install
+---
 
-# bun
-bun install
-```
+## 🛠️ Tech Stack
 
-## Development Server
+- **Framework**: [Nuxt 3](https://nuxt.com/)
+- **Backend / Database**: [Supabase](https://supabase.com/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Deployment**: [Vercel](https://vercel.com/)
+- **Fonts**: `@nuxt/fonts` (Sansation & Plus Jakarta Sans)
+- **Icons**: Font Awesome 6 & Custom SVG Icons
 
-Start the development server on `http://localhost:3000`:
+---
 
-```bash
-# npm
-npm run dev
+## 👨‍💻 Connect with Me
 
-# pnpm
-pnpm dev
+- **GitHub**: [@ValKyRiE2117](https://github.com/ValKyRiE2117)
+- **LinkedIn**: [Aritza Ganendra Kusuma](https://www.linkedin.com/in/aritzagk/)
 
-# yarn
-yarn dev
+---
 
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Developed by **Aritza Ganendra Kusuma**.
