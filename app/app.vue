@@ -5,6 +5,8 @@ import { Analytics } from "@vercel/analytics/nuxt";
 <template>
   <NuxtLayout>
     <Analytics />
-    <NuxtPage />
+    <UApp>
+      <NuxtPage />
+    </UApp>
   </NuxtLayout>
 </template>

@@ -5,10 +5,10 @@
         Keahlian & Teknologi
       </h2>
       <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-4xl mx-auto">
-        <div
+        <UPageCard
           v-for="skill in skills"
           :key="skill.name"
-          class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform"
+          class="rounded-xl p-6 text-center hover:scale-105 transition-transform"
         >
           <i
             v-if="skill.icon"
@@ -22,7 +22,7 @@
           />
           <h3 class="font-semibold text-xs md:text-sm lg:text-base">{{ skill.name }}</h3>
           <!-- <p class="text-gray-400 text-xs">{{ skill.category }}</p> -->
-        </div>
+        </UPageCard>
       </div>
     </div>
   </section>

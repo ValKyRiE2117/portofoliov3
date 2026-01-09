@@ -4,6 +4,9 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
+  future: {
+    compatibilityVersion: 4,
+  },
   css: ["./assets/css/main.css"],
   app: {
     head: {
@@ -42,7 +45,7 @@ export default defineNuxtConfig({
     ],
   },
 
-  modules: ["@nuxt/fonts", "@nuxt/image", "@nuxtjs/google-fonts", "@nuxtjs/supabase"],
+  modules: ["@nuxt/fonts", "@nuxt/image", "@nuxtjs/supabase", "@nuxt/ui"],
 
   runtimeConfig: {
     public: {
