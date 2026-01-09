@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import "@nuxt/ui";
 @import "tailwindcss";
-/* @import "@nuxt/ui"; */
+
 
 @tailwind utilities;
 
@@ -38,6 +39,11 @@ h6 {
     border-radius: var(--radius);
   }
 
+  .glass-card-spotlight {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+  }
+
   .bg-primary {
     background-color: var(--color-primary);
   }
@@ -48,6 +54,10 @@ h6 {
 
   .bg-primary\/10 {
     background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  }
+
+  .bg-primary\/20 {
+    background-color: color-mix(in srgb, var(--color-primary) 20%, transparent);
   }
 
   .bg-primary\/80 {

@@ -14,7 +14,8 @@
           <img
             src="/assets/my_pp_2.jpg"
             alt="Profile"
-            class="w-48 rounded-xl mx-auto mb-6 border-2 border-primary"
+            class="w-48 rounded-xl mx-auto mb-6 border-2"
+            style="border-color: var(--color-primary)"
           />
         </div>
         <h1 class="text-2xl md:text-4xl font-extrabold mb-4">
@@ -32,19 +33,19 @@
           <a
             href="/assets/CV-Main.pdf"
             target="_blank"
-            class="px-4 py-2 md:px-6 md:py-3 bg-primary text-gray-900 rounded-lg font-semibold hover:bg-primary/80 transition text-sm md:text-base"
+            class="px-4 py-2 md:px-6 md:py-3 bg-[var(--color-primary)] text-gray-900 rounded-lg font-semibold hover:bg-[var(--color-primary)/80] transition text-sm md:text-base"
           >
             <i class="fas fa-download mr-2"></i>Download CV
           </a>
           <a
             href="#contact"
-            class="px-4 py-2 md:px-6 md:py-3 border border-primary text-primary rounded-lg font-semibold hover:bg-primary/10 transition text-sm md:text-base"
+            class="px-4 py-2 md:px-6 md:py-3 border border-[var(--color-primary)] text-[var(--color-primary)] rounded-lg font-semibold hover:bg-[var(--color-primary)/10] transition text-sm md:text-base"
           >
             Hubungi Saya
           </a>
         </div>
         <div class="mt-12 text-xs text-gray-400">
-          Put me to <span class="text-primary font-extrabold">work</span> ✨
+          Put me to <span class="text-[var(--color-primary)] font-extrabold">work</span> ✨
         </div>
       </div>
     </div>

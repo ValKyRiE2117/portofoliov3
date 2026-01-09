@@ -3,7 +3,7 @@
     <!-- Theme Button -->
     <button
       @click="togglePanel"
-      class="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary-light shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-white hover:scale-110 hover:cursor-pointer"
+      class="w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-white hover:scale-110 hover:cursor-pointer"
     >
       <i class="fa-solid fa-swatchbook text-xl p-3 bg-gray-800 rounded-lg"></i>
     </button>
@@ -27,7 +27,7 @@
         >
           <div class="flex items-center gap-3">
             <div
-              class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center"
+              class="w-8 h-8 rounded-lg bg-[var(--color-primary)/20] flex items-center justify-center"
             >
               <i class="fas fa-palette text-gray-200"></i>
             </div>

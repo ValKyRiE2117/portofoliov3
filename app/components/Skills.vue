@@ -8,7 +8,9 @@
         <UPageCard
           v-for="skill in skills"
           :key="skill.name"
-          class="rounded-xl p-6 text-center hover:scale-105 transition-transform"
+          spotlight
+          spotlight-color="primary"
+          class="text-center glass-card-spotlight bg-" 
         >
           <i
             v-if="skill.icon"
@@ -21,7 +23,6 @@
             class="w-10 h-10 mx-auto mb-3"
           />
           <h3 class="font-semibold text-xs md:text-sm lg:text-base">{{ skill.name }}</h3>
-          <!-- <p class="text-gray-400 text-xs">{{ skill.category }}</p> -->
         </UPageCard>
       </div>
     </div>
@@ -29,6 +30,8 @@
 </template>
 
 <script setup lang="ts">
+const { primaryColor } = useTheme();
+
 const skills = [
   {
     name: "HTML",
@@ -68,8 +71,8 @@ const skills = [
     image: "https://cdn.worldvectorlogo.com/logos/codeigniter.svg",
   },
   {
-    name: "NextJS",
-    image: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/nextjs-light.svg",
+    name: "ReactJS  ",
+    image: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/reactjs.svg",
   },
   {
     name: "Tailwind CSS",

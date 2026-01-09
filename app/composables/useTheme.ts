@@ -60,13 +60,16 @@ export const useTheme = () => {
         "--color-primary-light",
         getLighterColor(colorHex)
       );
+
+      // Update Nuxt UI primary color
+      root.style.setProperty("--ui-primary", colorHex);
     }
   };
 
-  // Initialize on mount
-  if (process.client) {
+  // Watch for changes and update CSS
+  watch([primaryColor, isDark], () => {
     updateCSSVariables();
-  }
+  }, { immediate: true });
 
   return {
     primaryColor,
