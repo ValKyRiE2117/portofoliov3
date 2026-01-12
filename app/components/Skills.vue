@@ -11,6 +11,9 @@
           class="text-center bg-white/5 backdrop-blur-lg" 
           spotlight
           spotlight-color="primary"
+          :ui="{
+            root:'bg-white/5 backdrop-blur-lg'
+          }"
         >
           <i
             v-if="skill.icon"

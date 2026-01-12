@@ -117,7 +117,7 @@ async function getProjects() {
   const { data, error } = await supabase
     .from('projects')
     .select('*')
-    .order('created_at', { ascending: true });
+    .order('order', { ascending: true });
   
   if (error) {
     console.error("Supabase Error:", error);
