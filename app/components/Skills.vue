@@ -4,15 +4,18 @@
       <h2 class="text-4xl font-bold text-center mb-12 gradient-text">
         Keahlian & Teknologi
       </h2>
-      <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-4xl mx-auto">
+      <div
+        class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-4xl mx-auto"
+      >
         <UPageCard
           v-for="skill in skills"
           :key="skill.name"
-          class="text-center bg-white/5 backdrop-blur-lg" 
+          class="text-center bg-white/5 backdrop-blur-lg"
+          variant="soft"
           spotlight
           spotlight-color="primary"
           :ui="{
-            root:'bg-white/5 backdrop-blur-lg'
+            root: 'bg-white/5 backdrop-blur-lg border border-white/10',
           }"
         >
           <i
@@ -25,7 +28,9 @@
             :alt="`${skill.name} Logo`"
             class="w-10 h-10 mx-auto mb-3"
           />
-          <h3 class="font-semibold text-xs md:text-sm lg:text-base">{{ skill.name }}</h3>
+          <h3 class="font-semibold text-xs md:text-sm lg:text-base">
+            {{ skill.name }}
+          </h3>
         </UPageCard>
       </div>
     </div>
@@ -53,7 +58,8 @@ const skills = [
   },
   {
     name: "Vue.js",
-    image: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/vue-js.svg", 
+    image:
+      "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/vue-js.svg",
   },
   {
     name: "Nuxt",
@@ -75,7 +81,8 @@ const skills = [
   },
   {
     name: "ReactJS  ",
-    image: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/reactjs.svg",
+    image:
+      "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/reactjs.svg",
   },
   {
     name: "Tailwind CSS",
@@ -104,7 +111,8 @@ const skills = [
   },
   {
     name: "Figma",
-    image: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/figma.svg",
+    image:
+      "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/figma.svg",
   },
   {
     name: "Web Hosting",
