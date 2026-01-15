@@ -19,7 +19,7 @@
           />
         </div>
         <h1 class="text-2xl md:text-4xl font-extrabold mb-4">
-          <span class="gradient-text">Aritza Ganendra Kusuma, A.Md.Kom</span>
+          <span class="gradient-text">Aritza Ganendra Kusuma</span>
         </h1>
         <p class="text-gray-200 text-lg mb-2 font-semibold">
           Web Developer & UI/UX Designer
