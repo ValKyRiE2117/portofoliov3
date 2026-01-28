@@ -66,6 +66,16 @@ const skills = [
     image: "https://nuxt.com/assets/design-kit/icon-green.svg",
   },
   {
+    name: "ReactJS  ",
+    image:
+      "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/reactjs.svg",
+  },
+  {
+    name: "Express",
+    image:
+      "https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png&color=EFEFEF",
+  },
+  {
     name: "PHP",
     icon: "fab fa-php",
     color: "text-purple-400",
@@ -79,11 +89,7 @@ const skills = [
     name: "CodeIgniter",
     image: "https://cdn.worldvectorlogo.com/logos/codeigniter.svg",
   },
-  {
-    name: "ReactJS  ",
-    image:
-      "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/reactjs.svg",
-  },
+  
   {
     name: "Tailwind CSS",
     image:
@@ -119,5 +125,6 @@ const skills = [
     icon: "fas fa-globe",
     color: "text-green-400",
   },
+  
 ];
 </script>

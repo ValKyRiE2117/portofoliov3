@@ -11,12 +11,12 @@
 
       <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
         <component
-          :is="contact.isEmail ? 'button' : 'a'"
           v-for="contact in contacts"
           :key="contact.title"
-          :href="contact.isEmail ? undefined : contact.link"
-          :target="contact.external ? '_blank' : undefined"
-          @click="contact.isEmail ? contact.description : null"
+          :is="contact.external ? 'a' : 'button'"
+          :href="contact.link"
+          target="_blank"
+          @click="contact.description"
           class="glass-card rounded-xl p-6 text-center hover:scale-105 transition-transform cursor-pointer"
         >
           <i :class="`${contact.icon} text-3xl text-primary mb-3`"></i>
@@ -35,8 +35,8 @@ const contacts = [
     title: "Email",
     description: "aritzagk@gmail.com",
     link: "#",
-    external: false,
-    isEmail: true,
+    external: true,
+    isEmail: false,
   },
   {
     icon: "fab fa-whatsapp",
