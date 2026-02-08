@@ -1,6 +1,10 @@
+import { computed, watch } from "vue";
+
 export const useTheme = () => {
   const primaryColor = useState("primaryColor", () => "cyan");
-  const isDark = useState("isDark", () => true);
+  const theme = useState("theme", () => "dark");
+  const radius = useState("radius", () => 0.5);
+  const isDark = computed(() => theme.value === "dark");
 
   const colors = {
     red: "#ef4444",
@@ -22,9 +26,12 @@ export const useTheme = () => {
     rose: "#f43f5e",
   };
 
+  const primaryColorHex = computed(() => {
+    return colors[primaryColor.value as keyof typeof colors] || colors.cyan;
+  });
+
   // Helper to get lighter version of color
   const getLighterColor = (hex: string) => {
-    // Simple brightening - convert to RGB and increase values
     const r = parseInt(hex.slice(1, 3), 16);
     const g = parseInt(hex.slice(3, 5), 16);
     const b = parseInt(hex.slice(5, 7), 16);
@@ -43,38 +50,63 @@ export const useTheme = () => {
     updateCSSVariables();
   };
 
+  const setTheme = (newTheme: "light" | "dark") => {
+    theme.value = newTheme;
+    updateCSSVariables();
+  };
+
+  const setRadius = (newRadius: number) => {
+    radius.value = newRadius;
+    updateCSSVariables();
+  };
+
   const toggleTheme = () => {
-    isDark.value = !isDark.value;
+    theme.value = theme.value === "dark" ? "light" : "dark";
     updateCSSVariables();
   };
 
   const updateCSSVariables = () => {
     if (process.client) {
       const root = document.documentElement;
-      const colorHex =
-        colors[primaryColor.value as keyof typeof colors] || colors.cyan;
+      const colorHex = primaryColorHex.value;
 
       // Update primary color
       root.style.setProperty("--color-primary", colorHex);
       root.style.setProperty(
         "--color-primary-light",
-        getLighterColor(colorHex)
+        getLighterColor(colorHex),
       );
 
       // Update Nuxt UI primary color
       root.style.setProperty("--ui-primary", colorHex);
+
+      // Update theme class
+      if (theme.value === "dark") {
+        root.classList.add("dark");
+      } else {
+        root.classList.remove("dark");
+      }
     }
   };
 
   // Watch for changes and update CSS
-  watch([primaryColor, isDark], () => {
-    updateCSSVariables();
-  }, { immediate: true });
+  watch(
+    [primaryColor, theme],
+    () => {
+      updateCSSVariables();
+    },
+    { immediate: true },
+  );
 
   return {
     primaryColor,
+    primaryColorHex,
+    theme,
     isDark,
+    radius,
     setColor,
+    setTheme,
+    setRadius,
     toggleTheme,
   };
 };

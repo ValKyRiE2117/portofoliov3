@@ -28,7 +28,10 @@
       </div>
 
       <!-- Empty State -->
-      <div v-else-if="filteredProjects.length === 0" class="text-center text-gray-400">
+      <div
+        v-else-if="filteredProjects.length === 0"
+        class="text-center text-gray-400"
+      >
         No projects found in this category.
       </div>
 
@@ -47,11 +50,25 @@
           <div class="p-4 md:p-6">
             <UBadge :label="project.category" variant="subtle" />
             <h3 class="text-xl font-bold mt-2 mb-3">{{ project.title }}</h3>
-            <p class="text-gray-400 text-sm mb-4 line-clamp-2">{{ project.description }}</p>
+            <p class="text-gray-400 text-sm mb-4 line-clamp-2">
+              {{ project.description }}
+            </p>
             <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
-              <UBadge v-for="tech in project.technologies" :key="tech" :label="tech" variant="subtle"/>
+              <UBadge
+                v-for="tech in project.technologies"
+                :key="tech"
+                :label="tech"
+                variant="subtle"
+              />
             </div>
-            <UButton :to="project.link" target="_blank" class="w-full" variant="solid" size="lg">View Project &raquo;</UButton>
+            <UButton
+              :to="project.link"
+              target="_blank"
+              class="w-full"
+              variant="solid"
+              size="lg"
+              >View Project &raquo;</UButton
+            >
           </div>
         </div>
       </div>
@@ -94,7 +111,7 @@
 
 <script setup lang="ts">
 import { ref, computed, watch } from "vue";
-import { createClient } from '@supabase/supabase-js'
+import { createClient } from "@supabase/supabase-js";
 
 interface Project {
   id: number;
@@ -109,25 +126,30 @@ interface Project {
 }
 
 const config = useRuntimeConfig();
-const supabase = createClient(config.public.supabaseUrl, config.public.supabaseKey);
+const supabase = createClient(
+  config.public.supabaseUrl,
+  config.public.supabaseKey,
+);
 
 const projects = ref<Project[]>([]);
 
 async function getProjects() {
   const { data, error } = await supabase
-    .from('projects')
-    .select('*')
-    .order('order', { ascending: true });
-  
+    .from("projects")
+    .select("*")
+    .order("order", { ascending: true });
+
   if (error) {
     console.error("Supabase Error:", error);
   } else {
-    projects.value = data?.map(project => ({
-      ...project,
-      technologies: typeof project.technologies === 'string' 
-        ? project.technologies.split(',').map(tech => tech.trim())
-        : project.technologies || []
-    })) || [];
+    projects.value =
+      data?.map((project) => ({
+        ...project,
+        technologies:
+          typeof project.technologies === "string"
+            ? project.technologies.split(",").map((tech) => tech.trim())
+            : project.technologies || [],
+      })) || [];
   }
 }
 
@@ -146,7 +168,7 @@ const filteredProjects = computed((): Project[] => {
     return projects.value;
   }
   return projects.value.filter(
-    (project) => project.category === selectedCategory.value
+    (project) => project.category === selectedCategory.value,
   );
 });
 
