@@ -1,13 +1,7 @@
 <template>
   <section
-    class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+    class="min-h-screen flex items-center justify-center relative overflow-hidden pt-24"
   >
-    <div
-      class="absolute inset-0 bg-gradient-to-b from-gray-950 via-purple-900/5 to-cyan-900/10"
-    ></div>
-    <div
-      class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent"
-    ></div>
     <div class="container mx-auto px-6 relative z-10">
       <div class="text-center">
         <div class="mb-8">

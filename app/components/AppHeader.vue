@@ -1,5 +1,7 @@
 <template>
-  <nav class="fixed top-0 left-0 right-0 z-50 glass-card">
+  <nav
+    class="fixed top-0 left-0 right-0 md:w-fit mx-auto z-50 glass-card mt-0 md:mt-5 rounded-none md:rounded-full border border-white/20"
+  >
     <div class="container mx-auto px-6 py-4">
       <div class="flex items-center justify-between">
         <div class="text-xl font-bold text-primary lg:hidden"></div>
@@ -10,7 +12,7 @@
             v-for="item in navItems"
             :key="item.href"
             :href="item.href"
-            class="hover:text-primary transition text-sm"
+            class="hover:text-primary transition font-medium text-sm"
           >
             {{ item.label }}
           </a>
