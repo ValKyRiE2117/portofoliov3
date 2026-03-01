@@ -18,6 +18,10 @@ export default defineNuxtConfig({
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
+        {
+          name: "google-site-verification",
+          content: "lNZZzMwCzMdKS_pMsK781pp2cgbg5gn620BaoKpe3hc",
+        },
       ],
       link: [
         {
@@ -56,7 +60,8 @@ export default defineNuxtConfig({
   site: {
     url: "https://aritzagk.vercel.app/",
     name: "Aritza Ganendra Kusuma - Portfolio",
-    description: "Hi, Welcome to my personal website, showcasing my projects and skills.",
+    description:
+      "Hi, Welcome to my personal website, showcasing my projects and skills.",
     defaultLocale: "en",
   },
 
