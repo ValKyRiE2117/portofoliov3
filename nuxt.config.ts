@@ -45,18 +45,31 @@ export default defineNuxtConfig({
     ],
   },
 
-  modules: ["@nuxt/fonts", "@nuxt/image", "@nuxtjs/supabase", "@nuxt/ui"],
+  modules: [
+    "@nuxt/fonts",
+    "@nuxt/image",
+    "@nuxtjs/supabase",
+    "@nuxt/ui",
+    "@nuxtjs/seo",
+  ],
+
+  site: {
+    url: "https://aritzagk.vercel.app/",
+    name: "Aritza Ganendra Kusuma - Portfolio",
+    description: "Hi, Welcome to my personal website, showcasing my projects and skills.",
+    defaultLocale: "en",
+  },
 
   runtimeConfig: {
     public: {
       supabaseUrl: process.env.SUPABASE_URL,
       supabaseKey: process.env.SUPABASE_KEY,
-    }
+    },
   },
 
   supabase: {
     url: process.env.SUPABASE_URL,
     key: process.env.SUPABASE_KEY,
-    redirect: false
-  }
+    redirect: false,
+  },
 });
