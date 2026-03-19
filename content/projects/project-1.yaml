@@ -7,4 +7,5 @@ order: 1
 technologies:
   - Laravel
   - Jquery
-  - ""
+  - Filament
+  - TailwindCSS
