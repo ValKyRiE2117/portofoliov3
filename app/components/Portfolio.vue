@@ -23,7 +23,7 @@
       </div>
 
       <!-- Loading State -->
-      <div v-if="projects.length === 0" class="text-center text-gray-400">
+      <div v-if="status === 'pending'" class="text-center text-gray-400">
         Loading projects...
       </div>
 
@@ -111,51 +111,13 @@
 
 <script setup lang="ts">
 import { ref, computed, watch } from "vue";
-import { createClient } from "@supabase/supabase-js";
 
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  category: string;
-  link: string;
-  technologies: string[]; // This will be an array after processing
-  aspect_video?: boolean;
-  created_at?: string;
-}
-
-const config = useRuntimeConfig();
-const supabase = createClient(
-  config.public.supabaseUrl,
-  config.public.supabaseKey,
-);
-
-const projects = ref<Project[]>([]);
-
-async function getProjects() {
-  const { data, error } = await supabase
-    .from("projects")
-    .select("*")
-    .order("order", { ascending: true });
-
-  if (error) {
-    console.error("Supabase Error:", error);
-  } else {
-    projects.value =
-      data?.map((project) => ({
-        ...project,
-        technologies:
-          typeof project.technologies === "string"
-            ? project.technologies.split(",").map((tech) => tech.trim())
-            : project.technologies || [],
-      })) || [];
-  }
-}
-
-onMounted(() => {
-  getProjects();
+const { data: projectsData, status } = await useAsyncData('projects', () => {
+  // @ts-expect-error Nuxt Content types will be generated on first build
+  return queryCollection('projects').order('order', 'ASC').all()
 });
+
+const projects = computed(() => projectsData.value ?? []);
 
 const categories = ["All", "Website", "Mobile", "UI/UX"];
 const selectedCategory = ref("All");
@@ -163,7 +125,7 @@ const currentPage = ref(1);
 const projectsPerPage = 4;
 
 // Filter projects based on selected category
-const filteredProjects = computed((): Project[] => {
+const filteredProjects = computed(() => {
   if (selectedCategory.value === "All") {
     return projects.value;
   }

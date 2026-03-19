@@ -11,10 +11,10 @@
         >
         and
         <a
-          href="https://supabase.com/"
+          href="https://nuxt.studio/"
           class="text-[#00dc82] hover:underline font-bold"
           target="_blank"
-          >Supabase.</a
+          >Nuxt Studio.</a
         > 
       </p>
     </div>

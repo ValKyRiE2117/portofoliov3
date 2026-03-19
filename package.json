@@ -17,6 +17,7 @@
     "@nuxtjs/supabase": "^2.0.3",
     "@tailwindcss/vite": "^4.1.17",
     "@vercel/analytics": "^1.6.1",
+    "better-sqlite3": "^12.8.0",
     "nuxt": "^4.2.2",
     "ogl": "^1.0.11",
     "tailwindcss": "^4.1.17",
@@ -24,6 +25,12 @@
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
-    "@nuxtjs/seo": "^3.4.0"
+    "@iconify-json/logos": "^1.2.10",
+    "@iconify-json/lucide": "^1.2.98",
+    "@iconify-json/ri": "^1.2.10",
+    "@iconify-json/simple-icons": "^1.2.74",
+    "@nuxt/content": "^3.12.0",
+    "@nuxtjs/seo": "^3.4.0",
+    "nuxt-studio": "^1.5.0"
   }
 }

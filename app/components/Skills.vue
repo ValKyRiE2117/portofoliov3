@@ -18,12 +18,14 @@
             root: 'bg-white/5 backdrop-blur-lg border border-white/10',
           }"
         >
-          <i
+          <UIcon
             v-if="skill.icon"
-            :class="`${skill.icon} text-4xl ${skill.color} mb-3`"
-          ></i>
+            :name="skill.icon"
+            class="text-4xl mb-3 mx-auto block"
+            :class="skill.color"
+          />
           <img
-            v-else
+            v-else-if="skill.image"
             :src="skill.image"
             :alt="`${skill.name} Logo`"
             class="w-10 h-10 mx-auto mb-3"
@@ -38,93 +40,9 @@
 </template>
 
 <script setup lang="ts">
-const { primaryColor } = useTheme();
+const { data: skillsData } = await useAsyncData("skills", () => {
+  return queryCollection("skills").order("order", "ASC").all();
+});
 
-const skills = [
-  {
-    name: "HTML",
-    icon: "fab fa-html5",
-    color: "text-orange-500",
-  },
-  {
-    name: "CSS",
-    icon: "fab fa-css3-alt",
-    color: "text-blue-500",
-  },
-  {
-    name: "JavaScript",
-    icon: "fab fa-js",
-    color: "text-yellow-400",
-  },
-  {
-    name: "Vue.js",
-    image:
-      "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/vue-js.svg",
-  },
-  {
-    name: "Nuxt",
-    image: "https://nuxt.com/assets/design-kit/icon-green.svg",
-  },
-  {
-    name: "ReactJS  ",
-    image:
-      "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/reactjs.svg",
-  },
-  {
-    name: "Express",
-    image:
-      "https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png&color=EFEFEF",
-  },
-  {
-    name: "PHP",
-    icon: "fab fa-php",
-    color: "text-purple-400",
-  },
-  {
-    name: "Laravel",
-    icon: "fab fa-laravel",
-    color: "text-red-500",
-  },
-  {
-    name: "CodeIgniter",
-    image: "https://cdn.worldvectorlogo.com/logos/codeigniter.svg",
-  },
-  
-  {
-    name: "Tailwind CSS",
-    image:
-      "https://tailwindcss.com/_next/static/media/tailwindcss-mark.d52e9897.svg",
-  },
-  {
-    name: "Bootstrap",
-    icon: "fab fa-bootstrap",
-    color: "text-purple-600",
-  },
-  {
-    name: "MySQL",
-    icon: "fas fa-database",
-    color: "text-blue-400",
-  },
-  {
-    name: "Supabase",
-    image:
-      "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/supabase.svg",
-  },
-  {
-    name: "GIT",
-    icon: "fa fa-brands fa-git-alt",
-    color: "text-orange-600",
-  },
-  {
-    name: "Figma",
-    image:
-      "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/figma.svg",
-  },
-  {
-    name: "Web Hosting",
-    icon: "fas fa-globe",
-    color: "text-green-400",
-  },
-  
-];
+const skills = computed(() => skillsData.value ?? []);
 </script>

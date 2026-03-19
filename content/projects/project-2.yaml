@@ -1,0 +1,9 @@
+title: "Project 2"
+description: "Description for project 2"
+image: "/images/placeholder.png"
+category: "Mobile"
+link: "https://example.com"
+technologies:
+  - Vue
+  - Firebase
+order: 2

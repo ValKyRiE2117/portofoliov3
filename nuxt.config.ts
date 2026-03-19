@@ -52,9 +52,10 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/fonts",
     "@nuxt/image",
-    "@nuxtjs/supabase",
     "@nuxt/ui",
     "@nuxtjs/seo",
+    "@nuxt/content",
+    "nuxt-studio",
   ],
 
   site: {
@@ -65,16 +66,13 @@ export default defineNuxtConfig({
     defaultLocale: "en",
   },
 
-  runtimeConfig: {
-    public: {
-      supabaseUrl: process.env.SUPABASE_URL,
-      supabaseKey: process.env.SUPABASE_KEY,
+  studio: {
+    route: "/_studio",
+    repository: {
+      provider: "github",
+      owner: "ValKyRiE2117",
+      repo: "portofoliov3",
+      branch: "main",
     },
-  },
-
-  supabase: {
-    url: process.env.SUPABASE_URL,
-    key: process.env.SUPABASE_KEY,
-    redirect: false,
   },
 });
