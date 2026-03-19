@@ -1,0 +1,11 @@
+title: Sky Access Network
+category: Website
+description: Mengembangkan website ticketing sederhana dan landing page bagi klien secara freelance
+image: https://5r2035c7cu.ufs.sh/f/iFw9I2dIRHZnmFm6MdY1VyIWPgFEOQtB2TzXnL8jNfaDvkcm
+link: https://skyaccessnetwork.com/
+order: 3
+technologies:
+  - Laravel
+  - Jquery
+  - MySQL
+  - TailwindCSS

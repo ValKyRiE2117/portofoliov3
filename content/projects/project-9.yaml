@@ -1,0 +1,11 @@
+technologies:
+  - Laravel
+  - Filament
+  - REST API
+  - MySQL
+title: Inventori - Ongoing
+description: Website Manajemen Inventori Sederhana dengan Laravel + Filament
+category: "Website "
+image: https://5r2035c7cu.ufs.sh/f/iFw9I2dIRHZnZl87MJg1XTWiw4hlvBGDsd9RS6kczmH5bFLu
+order: 9
+link: https://github.com/ValKyRiE2117/inventori-toko
