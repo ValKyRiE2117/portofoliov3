@@ -72,7 +72,7 @@ export default defineNuxtConfig({
       provider: "github",
       owner: "ValKyRiE2117",
       repo: "portofoliov3",
-      branch: "cms",
+      branch: "main",
     },
   },
 });
