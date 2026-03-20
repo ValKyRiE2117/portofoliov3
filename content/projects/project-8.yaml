@@ -1,0 +1,11 @@
+technologies:
+  - Laravel
+  - Filament
+  - REST API
+  - MySQL
+title: Manajemen Perpus - Admin
+link: https://github.com/ValKyRiE2117/perpus-filament
+description: Website Manajemen Perpustakaan sederhana dengan Laravel 12 dan Filament
+image: https://5r2035c7cu.ufs.sh/f/iFw9I2dIRHZnomITTo8Epbv349Q0JR5adnjlNki62yCuWUrK
+category: Website
+order: 8

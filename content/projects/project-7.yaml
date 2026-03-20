@@ -1,0 +1,10 @@
+title: Website Perpus Online
+description: Website Frontend Perpustakaan sederhana yang terhubung dengan REST API
+image: https://5r2035c7cu.ufs.sh/f/iFw9I2dIRHZnWKnryEs8pwnJfCDHmu0sS7TVycEqgdMtiRO4
+category: Website
+link: https://github.com/ValKyRiE2117/perpus-frontend
+order: 7
+technologies:
+  - NuxtJS
+  - VueJS
+  - NuxtUI

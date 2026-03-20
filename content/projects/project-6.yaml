@@ -1,0 +1,10 @@
+technologies:
+  - NuxtJS
+  - TailwindCSS
+  - VueJS
+title: TravelHub - Ongoing
+description: Design Website Travel Frontend dengan Nuxt + Tailwind CSS
+image: https://5r2035c7cu.ufs.sh/f/iFw9I2dIRHZnTLUX1fQzGRjKtyb1hp0wquLkP74JEivXNgmo
+category: Website
+link: https://travelhub-project.vercel.app/
+order: 6

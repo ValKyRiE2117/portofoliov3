@@ -1,9 +1,11 @@
-title: "Project 2"
-description: "Description for project 2"
-image: "/images/placeholder.png"
-category: "Mobile"
-link: "https://example.com"
-technologies:
-  - Vue
-  - Firebase
+title: Sistem Monitoring Mahasiswa
+category: Website
+description: Sistem monitoring berbasis Website untuk pemantauan akademik mahasiswa
+image: https://5r2035c7cu.ufs.sh/f/iFw9I2dIRHZnLsiPSwGaSHkFRN7itYZlvhjuEDoXrUIWGbsd
+link: https://dti.dinus.ac.id/sistem-monitoring-mahasiswa/
 order: 2
+technologies:
+  - Laravel
+  - Livewire
+  - MySQL
+  - TailwindCSS
