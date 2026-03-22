@@ -66,6 +66,10 @@ export default defineNuxtConfig({
     defaultLocale: "en",
   },
 
+  routeRules: {
+    "/": { prerender: true },
+  },
+
   studio: {
     route: "/_studio",
     repository: {
