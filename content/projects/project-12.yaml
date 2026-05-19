@@ -1,0 +1,13 @@
+technologies:
+  - Laravel
+  - ReactJS
+  - MySQL
+  - TailwindCSS
+  - ShadCN
+  - REST API
+title: Dashboard Internal - Paperless Hospital
+description: Sistem Terintegrasi perusahaan untuk mengelola dan pendataan (Klien, Produk, Keuangan, Revenue, Status Service, dll)
+link: https://dashboard.paperlesshospital.id/login
+category: Website
+image: https://5r2035c7cu.ufs.sh/f/iFw9I2dIRHZn4VGoJwZxoBnFWEzJXs9MtKaRAh2kw7CfLx6u
+order: 1
